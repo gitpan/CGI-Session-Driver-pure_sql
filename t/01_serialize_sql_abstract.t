@@ -1,15 +1,15 @@
 use Test::More tests => 5;
 use lib ('./blib/lib', '../blib/lib');
 
-use CGI::Session::Serialize::SQLAbstract;
+use CGI::Session::Serialize::sql_abstract;
 
- is(CGI::Session::Serialize::SQLAbstract::_time_to_iso8601('bad'), undef, 'time_to_iso8601 testing bad data');
+ is(CGI::Session::Serialize::sql_abstract::_time_to_iso8601('bad'), undef, 'time_to_iso8601 testing bad data');
 
- is(CGI::Session::Serialize::SQLAbstract::_time_to_iso8601('1059085070'), 
+ is(CGI::Session::Serialize::sql_abstract::_time_to_iso8601('1059085070'), 
     _compute_local_time_from_indiana_time(2003,07,24,17,17,50)
 , 'time_to_iso8601 testing good data');
 
- my $frozen = CGI::Session::Serialize::SQLAbstract::freeze(undef,{
+ my $frozen = CGI::Session::Serialize::sql_abstract::freeze(undef,{
 		 _SESSION_ID 	=> 'xxxx',
 		 _SESSION_CTIME => '105908507',
 		 _SESSION_REMOTE_ADDR => '127.0.0.1',
@@ -35,7 +35,7 @@ is_deeply($frozen,
 ##
 {
  my $test_name = 'duration == end time - last access time';
- my $frozen = CGI::Session::Serialize::SQLAbstract::freeze(undef,{
+ my $frozen = CGI::Session::Serialize::sql_abstract::freeze(undef,{
 		 _SESSION_ID 	=> 'xxxx',
 		 _SESSION_CTIME => '105908507',
 		 _SESSION_ATIME => '100',
@@ -53,7 +53,7 @@ is_deeply($frozen,
 
 ###
 
-my $thawed = CGI::Session::Serialize::SQLAbstract::thaw(undef,{
+my $thawed = CGI::Session::Serialize::sql_abstract::thaw(undef,{
 				session_id => 'xxxx',
 				creation_time    => '105908507',
 				last_access_time => '105908507',

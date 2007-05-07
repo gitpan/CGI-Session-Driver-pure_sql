@@ -1,4 +1,8 @@
 Revision history for Perl module CGI::Session::Driver::PureSQL
+0.61 Mon May  7 09:31:45 EDT 2007
+  [BUG FIXES]  
+  * Tests were fixed to reference sql_abstract, not SQLAbstract .
+   (Thanks to David Cantrell for the test report)
 
 0.60 Thu May  3 17:53:32 EDT 2007
  [ENHANCEMENTS]

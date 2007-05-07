@@ -7,7 +7,7 @@ require CGI::Session::Driver::DBI;
 @ISA = qw( CGI::Session::Driver::DBI ); # provides 'table_name'
 #use base 'CGI::Session::Driver::DBI';
 
-$VERSION = '0.60';
+$VERSION = '0.61';
 
 $SERIALIZER = 'CGI::Session::Serialize::sql_abstract';
 require CGI::Session::Serialize::sql_abstract;
@@ -193,8 +193,8 @@ like you can with the L<CGI::Session::Driver::postgresql> driver. However, you m
 the habit of writing applications which use standard SQL structures, so this
 may not be much of a drawback. :) 
 
-It currently requires the SQLAbstract serializer to work, which is included in
-the distribution. If you specify another serializer it will be ignored. 
+It currently requires the sql_abstract serializer to work, which is included in
+the distribution. 
 
 =head1 STORAGE
 

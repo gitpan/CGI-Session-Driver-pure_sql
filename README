@@ -30,9 +30,8 @@ DESCRIPTION
     which use standard SQL structures, so this may not be much of a
     drawback. :)
 
-    It currently requires the SQLAbstract serializer to work, which is
-    included in the distribution. If you specify another serializer it will
-    be ignored.
+    It currently requires the sql_abstract serializer to work, which is
+    included in the distribution.
 
 STORAGE
     To store session data in SQL database, you first need to create a

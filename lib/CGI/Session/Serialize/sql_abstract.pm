@@ -6,7 +6,7 @@ use vars qw(@ISA $VERSION);
 
 use strict;
 
-$VERSION = 0.60;
+$VERSION = 0.61;
 
 # here's the kind of Perl -> SQL that's happening here
 
