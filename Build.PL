@@ -15,6 +15,7 @@ my $class = Module::Build->subclass(
 
 
 $class->new(
+     create_makefile_pl => 'traditional',
      module_name     => 'CGI::Session::Driver::pure_sql',
       license         => 'perl',
 	  requires => {

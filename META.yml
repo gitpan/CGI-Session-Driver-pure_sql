@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: CGI-Session-Driver-pure_sql
-version: 0.61
+version: 0.62
 author:
   - Mark Stosberg <mark@summersault.com>
 abstract: |-
@@ -15,7 +15,7 @@ requires:
 provides:
   CGI::Session::Driver::pure_sql:
     file: lib/CGI/Session/Driver/pure_sql.pm
-    version: 0.61
+    version: 0.62
   CGI::Session::Serialize::sql_abstract:
     file: lib/CGI/Session/Serialize/sql_abstract.pm
     version: 0.61

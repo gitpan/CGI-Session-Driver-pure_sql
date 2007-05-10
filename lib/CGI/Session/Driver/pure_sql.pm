@@ -7,7 +7,7 @@ require CGI::Session::Driver::DBI;
 @ISA = qw( CGI::Session::Driver::DBI ); # provides 'table_name'
 #use base 'CGI::Session::Driver::DBI';
 
-$VERSION = '0.61';
+$VERSION = '0.62';
 
 $SERIALIZER = 'CGI::Session::Serialize::sql_abstract';
 require CGI::Session::Serialize::sql_abstract;
